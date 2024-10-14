@@ -1,50 +1,27 @@
-# 🛒✨ Tienda Web con Pedidos vía WhatsApp 📲🔥
+# TiendaWatstapp
 
-¿Estás buscando una solución rápida y sencilla para vender tus productos en línea? ¡Nosotros tenemos la respuesta! 😎🚀 Con nuestra Tienda Web con pedidos al botón de WhatsApp, podrás vender de forma profesional y directa sin complicaciones. ¡Convierte cada clic en una venta segura! 💥💰
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
 
-🔑 Características Principales:
+## Development server
 
-Diseño Amigable y Personalizable 🎨
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Tienda atractiva y fácil de navegar para tus clientes.
-Personaliza tu marca con tus colores, logos y estilo.
-Botón de Pedido Directo a WhatsApp 📲
+## Code scaffolding
 
-Con un solo clic, los clientes pueden enviar sus pedidos directamente a tu WhatsApp.
-Conversación personalizada en tiempo real para cerrar ventas rápidamente.
-Catálogo Dinámico de Productos 🛍️
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Sube, edita y gestiona tus productos de manera sencilla.
-Incluye imágenes, descripciones, precios y más.
-Sistema de Carrito Simplificado 🛒
+## Build
 
-Tus clientes seleccionan productos, agregan al carrito y lo envían a WhatsApp en un solo paso.
-Notificaciones Inmediatas 🔔
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Recibe los pedidos al instante en tu WhatsApp y gestiona tus ventas de forma rápida y eficaz.
-Pago Directo y Flexibilidad 💳
+## Running unit tests
 
-Permite que tus clientes paguen por transferencias bancarias, efectivo o cualquier pasarela de pagos que configures.
-Optimización para Móvil 📱
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-Diseñada para funcionar perfectamente en móviles, brindando una experiencia de compra fluida desde cualquier dispositivo.
-SEO Optimizado 🚀
+## Running end-to-end tests
 
-Haz que tu tienda sea fácilmente encontrada en Google y atrae más tráfico orgánico.
-🔧 Configuración Rápida y Fácil:
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-No necesitas ser un experto en tecnología. Nos encargamos de la instalación y configuración completa de tu tienda para que esté lista en pocos días.
-📈 Beneficios para tu negocio:
+## Further help
 
-Aumenta tus ventas con una solución directa y sin fricciones.
-Mejora la atención al cliente con comunicación rápida vía WhatsApp.
-Agiliza el proceso de compra sin necesitar una compleja plataforma de pagos.
-🎯 Ideal Para:
-
-Emprendedores y negocios locales.
-Tiendas de ropa, accesorios, gadgets, productos artesanales y más.
-Cualquier negocio que quiera tener contacto directo con el cliente a través de WhatsApp.
-✨ Próximos Pasos:
-
-Contacta con nosotros para más información o para ver una demo.
-¡Empieza a vender de forma rápida y eficiente con tu tienda online!
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
