@@ -1,0 +1,171 @@
+<app-menu></app-menu>
+<section class="fm_details_section sec_ptb_100 clearfix">
+  <div class="container mb_100" *ngIf="producto; else noproducto">
+    <div class="row align-items-center justify-content-lg-between">
+      <div class="col-lg-6 col-md-7">
+        <div class="details_image">
+          <div class="tab-content">
+            <div id="di_tab_1" class="tab-pane active">
+              <img [src]="producto.imagen"
+                   [alt]="producto.nombre"
+                   alt="image_not_found"
+                   style="width: 100%;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-7">
+        <div class="details_content" >
+          <span class="item_type">Jackets</span>
+          <h2 class="item_title mb_15">{{ producto.nombre }}</h2>
+          <div class="item-id pb-2">Nº de artículo:
+            <span id="item_id">28546832</span>
+          </div>
+          <span class="d-flex align-items-center">
+            <div class="product-price">
+              <h2>
+                ${{ producto.precio }}
+              </h2>
+            </div>
+            <del class="product-old-price ml-2">${{ producto.precioOriginal }}</del>
+          </span>
+          <p class="mb-0">
+            {{ producto.description }}
+          </p>
+          <hr>
+          <div class="item_color_list mb_15 d-flex align-items-center clearfix">
+            <h4 class="list_title mb-0 text-uppercase">Color:</h4>
+            <ul class="ul_li clearfix">
+              <li *ngFor="let color of producto.color">
+                <button
+                  type="button"
+                  class="color-button"
+                  [ngClass]="{ 'selected': color === colorSeleccionado }"
+                  (click)="colorSeleccionado = color"
+                  [style.backgroundColor]="color"
+                  style="width: 24px; height: 24px; border-radius: 50%; border: 2px solid #ccc; margin-right: 8px;"
+                ></button>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class="item_size_list mb_30 d-flex align-items-center clearfix">
+            <h4 class="list_title mb-0 text-uppercase">Tamaño:</h4>
+            <div class="option_select mb-0">
+              <div class="out-select" tabindex="0">
+
+                <select class="form-select" [(ngModel)]="tamanioSeleccionado" name="tamanio">
+                  <option value="" disabled selected>Selecciona un tamaño</option>
+                  <ng-container *ngIf="producto?.tamanio">
+                    <option *ngFor="let size of convertirATamanioArray(producto.tamanio)" [value]="size">
+                      {{ size }}
+                    </option>
+                  </ng-container>
+                </select>
+
+              </div>
+            </div>
+          </div>
+
+          <ul class="btns_group ul_li clearfix">
+            <li>
+              <div class="quantity_input">
+                <form action="#">
+                  <span class="input_number_decrement">–</span>
+                  <input class="input_number" type="text" value="1">
+                  <span class="input_number_increment">+</span>
+                </form>
+              </div>
+            </li>
+            <li (click)="agregarProducto(producto)">
+              <a class="custom_btn btn_sm bg_fashion2_red text-uppercase" href="javascript:void(0)">
+                <i class="fa fa-shopping-bag mr-2"></i> Agregar
+              </a>
+            </li>
+            <li (click)="comprarporwhatsapp()">
+              <a class="custom_btn btn_sm bg_fashion2_red text-uppercase" href="#!">
+                <i class="fa fa-whatsapp"></i> WhatsApp
+              </a>
+            </li>
+          </ul>
+
+          <div class="delivery-partners pt-2">
+            <div class="partners_title">Nuestros principales socios logísticos</div>
+            <div class="partners-options">
+                <ul>
+                  <li><img src="https://d2ati23fc66y9j.cloudfront.net/checkout/2024/logistics/fedex.svg" width="62" height="35" alt="fedex"></li>
+                  <li><img src="https://d2ati23fc66y9j.cloudfront.net/checkout/2024/logistics/dhl.svg" width="62" height="35" alt="dhl"></li>
+                </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <ng-template #noproducto>
+    <p>No se encontró información del productoo.</p>
+  </ng-template>
+</section>
+
+
+
+
+<div class="product-detail-section">
+  <div class="container">
+    <div class="heading-sec">
+      <h2 class="dark-text fw-700">Detalles de producto</h2>
+    </div>
+
+    <div class="features" id="features">
+      <ul itemprop="description">
+        <li>
+          Fantasía, todos tienen uno.
+          Una poción mágica de amor de dulce tentación y frutas deliciosas que deja un rastro tentador de sensualidad abrazada.
+          eau de parfum de fantasía de Britney Spears ™.
+          Sé parte del encanto ya que este aroma comienza con una atractiva mezcla de exuberante lichi rojo, membrillo dorado y exótico kiwi.
+          Siente la emoción de la persecución y una burla juguetona mezclada con un delicioso acuerdo de magdalenas, pétalos de jazmín y una sexy orquídea de chocolate blanco.
+          Listo para cautivar ya que el hechizo está lanzado con un sorprendente acabado de almizcle cremoso, raíz de lirio encantado y maderas sensuales.
+        </li>
+      </ul>
+    </div>
+
+    <div id="additional-info" class="" style="min-height: 22px; margin-top: 5px;"><table class="featureTable" id="product-attribute-specs-table"><tbody><tr><td>Características</td><td>No hay descripción de características disponible</td></tr><tr><td>Dimensiones del producto ensamblado (L x W x H)</td><td>4.23 x 2.55 x 4.40 pulgadas ( 10.7 x 6.5 x 11.2 cm )</td></tr><tr><td>Marca</td><td>BRITNEY SPEARS</td></tr><tr><td>Talla</td><td>1.0 Fl Oz</td></tr><tr><td>Aromatar</td><td>Floral</td></tr><tr><td>Familia de olor</td><td>Afrutado</td></tr><tr><td>Formulario</td><td>Spray</td></tr><tr><td>Concentración de fragancia</td><td>Parfum</td></tr><tr><td>Condición</td><td>Nuevo</td></tr><tr><td>Ocasión</td><td>día de San Valentín</td></tr><tr><td>Fuerza de Fragancia</td><td>Fuerte</td></tr><tr><td>Contar</td><td>1</td></tr></tbody></table></div>
+
+  </div>
+</div>
+
+
+<div class="chat-with-us">
+  <div class="container">
+    <i class="fa fa-comments"></i>
+    ¿Tienes alguna consulta?
+    <a href="javascript:void(0);" class="chat_actived">
+      Chatea con nosotros
+    </a>
+  </div>
+</div>
+
+
+<section class="pt-5 pb-5 important-info">
+  <div class="container">
+      <div class="important-notes">
+          <div class="heading-sec">
+              <h2 class="heading">Información importante</h2>
+          </div>
+          <ul>
+              <li>Limitaciones: Para los productos enviados al extranjero, ten en cuenta que cualquier garantía del fabricante puede no ser válida; las opciones de servicio del fabricante pueden no estar disponibles; los manuales del producto, las instrucciones y las advertencias de seguridad pueden no estar en los idiomas del país de destino; los productos (y los materiales que los acompañan) pueden no estar diseñados de acuerdo con las normas, especificaciones y requisitos de etiquetado del país de destino; y los productos pueden no ajustarse al voltaje del país de destino y a otras normas eléctricas (lo que requiere el uso de un adaptador o convertidor, si procede). El destinatario es responsable de asegurarse de que el producto puede ser importado legalmente al país de destino. Cuando hagas un pedido a Ubuy o a sus filiales, el destinatario es el importador registrado y debe cumplir todas las leyes y normativas del país de destino.</li>
+              <li>No todos los productos que aparecen en la web están a la venta, ya que es un motor de búsqueda a nivel mundial. Los productos están sujetos a las normas de exportación/comercio.</li>
+                          </ul>
+      </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
+
+
+
+
+
+

@@ -1,0 +1,29 @@
+.footer {
+    background-color: black;
+    padding: 4rem 0;
+}
+.g-4, .gy-4 {
+    --fc-gutter-y: 1rem;
+}
+
+.g-4, .gx-4 {
+    --fc-gutter-x: 1rem;
+}
+.mb-4 {
+    margin-bottom: 1rem !important;
+}
+.flex-column {
+    flex-direction: column !important;
+}
+.mb-2 {
+    margin-bottom: .5rem !important;
+}
+.footer .nav .nav-item .nav-link {
+    color: #5c6c75;
+    padding: 0;
+}
+.btn-float-button {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}

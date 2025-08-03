@@ -1,0 +1,17 @@
+a.brand_link img {
+  width: 45%;
+}
+.menu_item_has_child > a:after {
+  content: none;
+}
+.classic_ecommerce_header .header_bottom {
+  min-height: 70px;
+}
+.classic_ecommerce_header .main_menu > ul > li > a {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  color: #3f3f3f;
+  display: inline-block;
+  font-size: 15px;
+  text-transform: uppercase;
+}

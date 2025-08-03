@@ -1,0 +1,44 @@
+<div>
+  <div class="action_btns_group">
+    <button type="button" class="cart_btn" (click)="toggleCarrito()">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="btn_badge">{{ carrito.length }}</span>
+    </button>
+  </div>
+
+  <!-- Sidebar del carrito -->
+  <div class="sidebar-menu-wrapper" [ngClass]="{ 'activo': mostrarproductos }">
+    <div class="cart_sidebart">
+      <button type="button" class="close_btn" (click)="toggleCarrito()">
+        <i class="fa fa-times"></i>
+      </button>
+
+      <ul class="cart_items_list ul_li_block mb_30 clearfix pt-3">
+        <li *ngFor="let producto of carrito; let i = index">
+          <div class="item_image">
+            <em class="btn_badgets">{{ producto.cantidad }}</em>
+            <img [src]="producto.imagen" alt="{{ producto.nombre }}">
+          </div>
+          <div class="item_content">
+            <h4 class="item_title">{{ producto.nombre }}</h4>
+            <span class="item_price">${{ producto.precio }}</span>
+          </div>
+          <button type="button" class="remove_btn" (click)="removerProducto(i)">
+            <i class="fa fa-trash"></i>
+          </button>
+        </li>
+      </ul>
+
+      <!-- Totales -->
+      <ul class="total_price ul_li_block mb_30 clearfix">
+        <li><span>Subtotal:</span><span>${{ calcularSubtotal() }}</span></li>
+        <li><span>IVA 15%:</span><span>${{ calcularIVA() }}</span></li>
+        <li><span>Total:</span><span>${{ calcularTotal() }}</span></li>
+      </ul>
+
+      <ul class="btns_group ul_li_block clearfix" (click)="pedirporwhatsapp()">
+        <li><a href="#"><i class="fa fa-whatsapp"></i> Pedir por WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

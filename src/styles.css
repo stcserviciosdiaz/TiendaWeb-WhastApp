@@ -1,3 +1,20 @@
+body {
+  font-family: "poppinsmedium", sans-serif;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.classic_ecommerce_header .main_menu > ul > li > a {
+  color: #141414;
+  font-size: 18px;
+  font-weight: 600;
+  font-weight: 500;
+}
+.btn-standar{
+  background-color: #f8be5a;
+  border-color: #f8be5a;
+  padding: 5px 20px 5px 20px;
+}
+
 .classic_ecommerce_policy {
   padding: 50px 0px;
   background: rgb(248, 248, 248);
@@ -9,7 +26,7 @@
   margin: 50px auto 0px;
 }
 .ecommerce_policy_item .item_icon {
-  width: 77px;
+  width: 35%;
   float: left;
   height: 77px;
   display: flex;
@@ -17,7 +34,7 @@
   border-radius: 100%;
   align-items: center;
   justify-content: center;
-  background-color: #fce3dd;
+  background-color: #fac663;
 }
 .ecommerce_policy_item .item_title {
   line-height: 1;
@@ -139,6 +156,14 @@
   justify-content: center;
   background-color: #e8e8e8;
 }
+.action_btns_group button {
+  width: 50px;
+  height: 50px;
+  color: #000000;
+  font-size: 16px;
+  line-height: 54px;
+  background-color: #ffffff;
+}
 button {
   margin: 0px;
   padding: 0px;
@@ -162,3 +187,35 @@ a:hover, button:hover {
 .sticky_header {
   position: unset;
 }
+.pbg_red{
+  background-color: #ff0000;
+}
+.pbg_black{
+  background-color: black;
+}
+.pbg_blue{
+  background-color: blue;
+}
+.product_action_btns a {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  font-size: 16px;
+  text-align: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #2e2e2e;
+  justify-content: center;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px 1px rgba(0, 0, 0, 0.07);
+  padding: 0px 12px 0 12px;
+}
+.ecommerce_product_grid .item_title > a {
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+
